@@ -1,0 +1,40 @@
+player-messages:
+    join: "&a+ &f%player%"
+    leave: "&c- &8%player%"
+    welcome: "&a+ &f%player% &bhas joined for the first time!"
+
+command-messages:
+    unknown: "&cUnknown command: &o/%input%"
+    denied: "&cUnknown command: &o/%command%"
+    usage: "&fUsage: %usage%"
+
+command-sounds:
+    unknown: BLOCK.NOTE_BLOCK.BASS
+    denied: BLOCK.NOTE_BLOCK.BASS
+    usage: BLOCK.NOTE_BLOCK.BASS
+
+# ---------------------------------------------------------------------
+# ------------------------- [[ Spawn Addon ]] -------------------------
+# ---------------------------------------------------------------------
+spawn:
+    enabled: true
+    cooldown: 5
+    time: 3
+
+    on-join: true
+    on-death: true
+    cancel-on-move: true
+
+    tp-title: "&b&lSPAWN"
+    tp-subtitle: "&3Teleporting in &f%time% &3seconds..."
+    tp-sound: ENTITY.EXPERIENCE_ORB.PICKUP
+
+    moved-message: "&cTeleportation cancelled due to movement!"
+    cooldown-message: "&cYou need to wait %cooldown% more seconds!"
+    deny-message: "&cYou can't teleport right now!"
+
+    cancel-sound: BLOCK.NOTE_BLOCK.BASS
+
+    locations:
+        - { world: world, x: 124.5, y: 64, z: 10.5, yaw: 0, pitch: 0 }
+        - { world: world, x: 124.5, y: 64, z: 10.5, yaw: 180, pitch: 0 }

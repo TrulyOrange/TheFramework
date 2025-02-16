@@ -1,0 +1,18 @@
+name: TheFramework
+version: '1.0.0'
+main: me.mcplugins.theframework.TheFramework
+load: STARTUP
+api-version: '1.21'
+authors: [ Orange ]
+description: The only plugin you need
+
+commands:
+    rel:
+        description: "Reload the plugins"
+        usage: "/rel"
+        aliases: [ rel ]
+        permission: framework.reload
+
+permissions:
+    framework.reload:
+        default: op

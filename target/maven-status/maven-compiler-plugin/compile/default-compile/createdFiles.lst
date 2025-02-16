@@ -1,0 +1,9 @@
+me\mcplugins\theframework\commands\CustomCommand.class
+me\mcplugins\theframework\managers\PlayerManager.class
+me\mcplugins\theframework\managers\SoundManager.class
+me\mcplugins\theframework\TheFramework.class
+me\mcplugins\theframework\managers\EnumManager.class
+me\mcplugins\theframework\commands\CommandsManager.class
+me\mcplugins\theframework\managers\FileReader.class
+me\mcplugins\theframework\commands\RelCommand.class
+me\mcplugins\theframework\managers\TextManager.class
