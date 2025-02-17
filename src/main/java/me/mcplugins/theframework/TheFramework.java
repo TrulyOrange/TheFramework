@@ -4,6 +4,7 @@ import me.mcplugins.theframework.commands.CommandsManager;
 import me.mcplugins.theframework.managers.FileReader;
 import me.mcplugins.theframework.managers.PlayerManager;
 import me.mcplugins.theframework.managers.TextManager;
+import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
 import org.bukkit.event.Listener;
@@ -17,7 +18,10 @@ public final class TheFramework extends JavaPlugin {
 
 	@Override
 	public void onEnable() {
+		TextManager.console(Component.text(""));
 		TextManager.console(TextManager.format("&aThe Framework is online!"));
+		TextManager.console(TextManager.format("&aThe Framework is online!"));
+		TextManager.console(Component.text(""));
 
 		FileReader.load();
 		CommandsManager.load();
