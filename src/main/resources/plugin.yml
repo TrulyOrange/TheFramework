@@ -1,9 +1,9 @@
 name: TheFramework
-version: '1.0.0'
+version: '1.0.1'
 main: me.mcplugins.theframework.TheFramework
 load: STARTUP
 api-version: '1.21'
-authors: [ Orange ]
+author: Orange
 description: The only plugin you need
 
 commands:

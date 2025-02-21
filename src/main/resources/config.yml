@@ -13,9 +13,14 @@ command-sounds:
     denied: BLOCK.NOTE_BLOCK.BASS
     usage: BLOCK.NOTE_BLOCK.BASS
 
-# ---------------------------------------------------------------------
-# ------------------------- [[ Spawn Addon ]] -------------------------
-# ---------------------------------------------------------------------
+placeholders:
+    replace-in-chat: true
+    custom:
+        secret: "&oEmpty Note..."
+
+# ---------------------------------------------------------------------------------------------------
+# ---------------------------------------- [[ Spawn Addon ]] ----------------------------------------
+# ---------------------------------------------------------------------------------------------------
 spawn:
     enabled: true
     cooldown: 5
@@ -38,3 +43,122 @@ spawn:
     locations:
         - { world: world, x: 124.5, y: 64, z: 10.5, yaw: 0, pitch: 0 }
         - { world: world, x: 124.5, y: 64, z: 10.5, yaw: 180, pitch: 0 }
+
+# ---------------------------------------------------------------------------------------------------
+# ---------------------------------------- [[ Drops Addon ]] ----------------------------------------
+# ---------------------------------------------------------------------------------------------------
+drops:
+    display: "&7x%amount% %drop%"
+    glow: true
+    auto-pickup: false
+
+    deny-message: "&cYou can't drop a %item%!"
+    deny-sound: BLOCK.NOTE_BLOCK.BASS
+    deny:
+        - rare_sword
+        - DIAMOND
+    
+    on-break:
+        STONE:
+            COBBLESTONE: 80
+        GRAVEL:
+            apple: 30
+            rare_sword: 10
+        COAL_ORE:
+            rare_sword: 100
+
+    break-restrictions-message: "&cYou need another tool to break a %block%!"
+    break-restrictions-sound: BLOCK.NOTE_BLOCK.BASS
+    break-restrictions:
+        DIRT:
+            - starter_pick
+            - WOODEN_SHOVEL
+            - STONE_SHOVEL
+            - IRON_SHOVEL
+
+# ---------------------------------------------------------------------------------------------------
+# ---------------------------------------- [[ Items Addon ]] ----------------------------------------
+# ---------------------------------------------------------------------------------------------------
+items:
+    types:
+        - WEAPON,
+        - Armor,
+        - TOOL,
+        - FOOD,
+        - FUEL,
+        - MISC,
+        - ORE
+
+    rarity:
+        COMMON: "&7Common"
+        UNCOMMON: "&aUncommon"
+        RARE: "&bRare"
+        EPIC: "&5Epic"
+        LEGENDARY: "&eLegendary"
+
+    format:
+        name: "%name%"
+        lore:
+            - "%rarity% %luck%"
+            - "%dupe%"
+            - " "
+            - "%attributes%"
+            - " "
+            - "%unbreakable%"
+            - "%type%"
+
+        unbreakable: "&3Unbreakable"
+        type: "&8&o%value%"
+
+        luck-default: "&c⭐ &f%value%"
+        luck:
+            1: "&f⭐ &f%value%"
+            30: "&a⭐⭐ &f%value%"
+            50: "&b⭐⭐⭐ &f%value%"
+            100: "&d⭐⭐⭐⭐ &f%value%"
+            1000: "&e⭐⭐⭐⭐⭐ &f%value%"
+
+        dupe:
+            text: "%level% %chance%"
+
+            chance-default: "&f%value%"
+            chance:
+                10: "&b%value%"
+
+            level-default: "&c🌟 &f%value%"
+            level:
+                1: "&f🌟 &f%value%"
+                2: "&a🌟🌟 &f%value%"
+                3: "&b🌟🌟🌟 &f%value%"
+                4: "&5🌟🌟🌟🌟 &f%value%"
+                5: "&e🌟🌟🌟🌟🌟 &f%value%"
+
+        attributes-default: "&b💠 &f%value%"
+        attributes:
+            MAX_HEALTH: "&c❤ &f%value%"
+            MOVEMENT_SPEED: "&b🎿 &f%value%"
+            SNEAKING_SPEED: "&b🎿 &f%value%"
+
+            ATTACK_DAMAGE: "&c🗡 &f%value%"
+            ATTACK_SPEED: "&c⌛ &f%value%"
+            ATTACK_KNOCKBACK: "&c🗡 &f%value%"
+            KNOCKBACK_RESISTANCE: "&c🛡️ &f%value%"
+
+            ARMOR: "&b🛡️ &f%value%"
+            ARMOR_TOUGHNESS: "&b🛡️ &f%value%"
+
+            LUCK: "&a🍀 &f%value%"
+            BLOCK_INTERACTION_RANGE: "&b🛜 &f%value%"
+            ENTITY_INTERACTION_RANGE: "&b🛜 &f%value%"
+            BLOCK_BREAK_SPEED: "&6⛏ &f%value%"
+            MINING_EFFICIENCY: "&6⛏ &f%value%"
+            SUBMERGED_MINING_SPEED: "&b🌊 &f%value%"
+
+            SCALE: "&6📐 &f%value%"
+            STEP_HEIGHT: "&6📐 &f%value%"
+            GRAVITY: "&a🌍 &f%value%"
+            JUMP_STRENGTH: "&a🌍 &f%value%"
+
+            OXYGEN_BONUS: "&b🫧 &f%value%"
+            WATER_MOVEMENT_EFFICIENCY: "&b🌊 &f%value%"
+            SPAWN_REINFORCEMENTS: "&2🐕 &f%value%"

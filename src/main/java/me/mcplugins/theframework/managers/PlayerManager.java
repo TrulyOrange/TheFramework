@@ -13,9 +13,13 @@ public class PlayerManager implements Listener {
 		Player player = event.getPlayer();
 
 		if (player.hasPlayedBefore())
-			event.joinMessage(TextManager.format(FileReader.getString("config", "player-messages.join", ""), player));
+			event.joinMessage(TextManager.format(
+				FileReader.getString("config", "player-messages.join", ""),
+				player));
 		else
-			event.joinMessage(TextManager.format(FileReader.getString("config", "player-messages.welcome", ""), player));
+			event.joinMessage(TextManager.format(
+				FileReader.getString("config", "player-messages.welcome", ""),
+				player));
 	}
 
 	@EventHandler

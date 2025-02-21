@@ -14,7 +14,7 @@ import java.util.Set;
 
 public class FileReader {
 	private static final Map<String, YamlConfiguration> FILES = new HashMap<>();
-	private static final TheFramework PLUGIN = TheFramework.getInstance();
+	private static final TheFramework PLUGIN = TheFramework.asPlugin();
 
 	public static void load() {
 		File pluginFolder = PLUGIN.getDataFolder();
@@ -45,7 +45,7 @@ public class FileReader {
 	}
 
 	private static void ensureDefault(File pluginFolder, String filePath) {
-		File file = new File(PLUGIN.getDataFolder(), filePath);
+		File file = new File(pluginFolder, filePath);
 		File parentFolder = file.getParentFile();
 
 		if (!parentFolder.exists() && !parentFolder.mkdirs()) {
@@ -59,7 +59,7 @@ public class FileReader {
 
 	public static void saveFile(String fileName, FileConfiguration update) {
 		try {
-			File file = new File(TheFramework.getInstance().getDataFolder(), fileName + ".yml");
+			File file = new File(TheFramework.asPlugin().getDataFolder(), fileName + ".yml");
 			YamlConfiguration updatedConfig = YamlConfiguration.loadConfiguration(file);
 
 			for (String key : update.getKeys(true))

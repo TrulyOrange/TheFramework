@@ -7,61 +7,38 @@ import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import net.kyori.adventure.text.serializer.plain.PlainTextComponentSerializer;
 import net.kyori.adventure.title.Title;
 import org.bukkit.Bukkit;
-import org.bukkit.command.Command;
 import org.bukkit.entity.Player;
 
 import java.time.Duration;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class TextManager {
 	public static final LegacyComponentSerializer FORMATTER = LegacyComponentSerializer.legacyAmpersand();
 	public static final PlainTextComponentSerializer PLAIN = PlainTextComponentSerializer.plainText();
 
-	public static Component format(String text, Map<String, String> placeholders) {
-		if (text == null) return Component.text("");
-
-		for (Map.Entry<String, String> entry : placeholders.entrySet())
-			text = text.replace(entry.getKey(), entry.getValue());
-
-		return deformat(Component.text("")).append(FORMATTER.deserialize(text));
+	public static String toString(Component component) {
+		return PLAIN.serialize(component);
 	}
-	public static Component format(String text, Player player) {
-		Map<String, String> placeholders = new HashMap<>();
-
-		placeholders.put("%player%", player.getName());
-		placeholders.put("%world%", player.getWorld().getName());
-		placeholders.put("%health%", String.valueOf(player.getHealth()));
-
-		return format(text, placeholders);
-	}
-	public static Component format(String text, Command command) {
-		Map<String, String> placeholders = new HashMap<>();
-
-		placeholders.put("%command%", command.getLabel());
-		placeholders.put("%usage%", command.getUsage());
-
-		return format(text, placeholders);
-	}
-	public static Component format(String text, String misc) {
-		Map<String, String> placeholders = new HashMap<>();
-
-		placeholders.put("%input%", misc);
-		placeholders.put("%time%", misc);
-		placeholders.put("%cooldown%", misc);
-
-		return format(text, placeholders);
+	public static String toTitleCase(String input) {
+		if (input == null || input.isEmpty()) return "";
+		return Arrays.stream(input.toLowerCase().split("_"))
+			.map(word -> Character.toUpperCase(word.charAt(0)) + word.substring(1))
+			.collect(Collectors.joining(" "));
 	}
 
-	public static Component format(String text) {
-		return deformat(Component.text("")).append(FORMATTER.deserialize(text));
-	}
 	public static Component format(Component text) {
-		String rawText = PLAIN.serialize(text);
-		if (rawText.contains("&"))
-			return deformat(Component.text("")).append(FORMATTER.deserialize(rawText));
-
-		return text;
+		return format(toString(text));
+	}
+	public static Component format(String text) {
+		if (text.contains("&"))
+			return deformat(Component.text("")).append(FORMATTER.deserialize(text));
+		return Component.text(text);
+	}
+	public static Component format(String text, Object context) {
+		if (text == null) return Component.text("");
+		text = Placeholders.apply(text, context);
+		return FORMATTER.deserialize(text);
 	}
 
 	public static Component deformat(Component text) {

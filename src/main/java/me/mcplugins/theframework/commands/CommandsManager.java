@@ -35,7 +35,7 @@ public class CommandsManager implements CommandExecutor, TabCompleter, Listener 
 	}
 
 	public static void register(CustomCommand command) {
-		register(command, TheFramework.getInstance());
+		register(command, TheFramework.asPlugin());
 	}
 	public static void register(CustomCommand command, JavaPlugin plugin) {
 		String name = command.getName().toLowerCase();
