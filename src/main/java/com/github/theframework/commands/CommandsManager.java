@@ -1,10 +1,10 @@
-package me.mcplugins.theframework.commands;
+package com.github.theframework.commands;
 
+import com.github.theframework.TheFramework;
+import com.github.theframework.managers.FileReader;
+import com.github.theframework.managers.SoundManager;
+import com.github.theframework.managers.TextManager;
 import lombok.Getter;
-import me.mcplugins.theframework.TheFramework;
-import me.mcplugins.theframework.managers.FileReader;
-import me.mcplugins.theframework.managers.SoundManager;
-import me.mcplugins.theframework.managers.TextManager;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

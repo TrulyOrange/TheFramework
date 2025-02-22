@@ -1,10 +1,10 @@
-package me.mcplugins.theframework;
+package com.github.theframework;
 
-import me.mcplugins.theframework.commands.CommandsManager;
-import me.mcplugins.theframework.managers.FileReader;
-import me.mcplugins.theframework.managers.Placeholders;
-import me.mcplugins.theframework.managers.PlayerManager;
-import me.mcplugins.theframework.managers.TextManager;
+import com.github.theframework.commands.CommandsManager;
+import com.github.theframework.managers.FileReader;
+import com.github.theframework.managers.Placeholders;
+import com.github.theframework.managers.PlayerManager;
+import com.github.theframework.managers.TextManager;
 import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
 import org.bukkit.event.Listener;

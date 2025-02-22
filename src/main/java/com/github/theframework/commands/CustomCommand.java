@@ -1,4 +1,4 @@
-package me.mcplugins.theframework.commands;
+package com.github.theframework.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;

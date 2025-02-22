@@ -1,4 +1,4 @@
-package me.mcplugins.theframework.managers;
+package com.github.theframework.managers;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

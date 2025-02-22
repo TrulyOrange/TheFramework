@@ -1,4 +1,4 @@
-package me.mcplugins.theframework.managers;
+package com.github.theframework.managers;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;

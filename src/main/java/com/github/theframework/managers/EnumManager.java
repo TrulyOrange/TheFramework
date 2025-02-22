@@ -1,4 +1,4 @@
-package me.mcplugins.theframework.managers;
+package com.github.theframework.managers;
 
 import java.util.stream.Stream;
 

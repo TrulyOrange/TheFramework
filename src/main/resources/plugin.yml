@@ -1,6 +1,6 @@
 name: TheFramework
 version: '1.0.1'
-main: me.mcplugins.theframework.TheFramework
+main: com.github.theframework.TheFramework
 load: STARTUP
 api-version: '1.21'
 author: Orange

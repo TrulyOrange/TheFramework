@@ -1,6 +1,6 @@
-package me.mcplugins.theframework.commands;
+package com.github.theframework.commands;
 
-import me.mcplugins.theframework.managers.TextManager;
+import com.github.theframework.managers.TextManager;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 

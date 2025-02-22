@@ -1,6 +1,6 @@
-package me.mcplugins.theframework.managers;
+package com.github.theframework.managers;
 
-import me.mcplugins.theframework.TheFramework;
+import com.github.theframework.TheFramework;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
