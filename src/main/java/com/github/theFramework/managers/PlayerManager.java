@@ -1,4 +1,4 @@
-package com.github.theframework.managers;
+package com.github.theFramework.managers;
 
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

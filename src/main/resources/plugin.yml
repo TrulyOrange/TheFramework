@@ -1,6 +1,6 @@
 name: TheFramework
 version: '1.0.1'
-main: com.github.theframework.TheFramework
+main: com.github.theFramework.TheFramework
 load: STARTUP
 api-version: '1.21'
 author: Orange

@@ -1,6 +1,6 @@
-package com.github.theframework.commands;
+package com.github.theFramework.commands;
 
-import com.github.theframework.managers.TextManager;
+import com.github.theFramework.managers.TextManager;
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
 

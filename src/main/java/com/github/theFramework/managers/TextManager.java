@@ -1,4 +1,4 @@
-package com.github.theframework.managers;
+package com.github.theFramework.managers;
 
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.format.NamedTextColor;

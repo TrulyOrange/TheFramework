@@ -1,6 +1,6 @@
-package com.github.theframework.managers;
+package com.github.theFramework.managers;
 
-import com.github.theframework.TheFramework;
+import com.github.theFramework.TheFramework;
 import org.bukkit.NamespacedKey;
 import org.bukkit.Registry;
 import org.bukkit.Sound;

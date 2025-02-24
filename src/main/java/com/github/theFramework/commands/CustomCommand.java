@@ -1,4 +1,4 @@
-package com.github.theframework.commands;
+package com.github.theFramework.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;

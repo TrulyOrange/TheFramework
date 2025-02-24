@@ -1,4 +1,4 @@
-package com.github.theframework.managers;
+package com.github.theFramework.managers;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;

@@ -1,10 +1,10 @@
-package com.github.theframework;
+package com.github.theFramework;
 
-import com.github.theframework.commands.CommandsManager;
-import com.github.theframework.managers.FileReader;
-import com.github.theframework.managers.Placeholders;
-import com.github.theframework.managers.PlayerManager;
-import com.github.theframework.managers.TextManager;
+import com.github.theFramework.commands.CommandsManager;
+import com.github.theFramework.managers.FileReader;
+import com.github.theFramework.managers.Placeholders;
+import com.github.theFramework.managers.PlayerManager;
+import com.github.theFramework.managers.TextManager;
 import org.bukkit.Bukkit;
 import org.bukkit.NamespacedKey;
 import org.bukkit.event.Listener;

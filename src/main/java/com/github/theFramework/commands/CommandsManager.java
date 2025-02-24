@@ -1,9 +1,9 @@
-package com.github.theframework.commands;
+package com.github.theFramework.commands;
 
-import com.github.theframework.TheFramework;
-import com.github.theframework.managers.FileReader;
-import com.github.theframework.managers.SoundManager;
-import com.github.theframework.managers.TextManager;
+import com.github.theFramework.TheFramework;
+import com.github.theFramework.managers.FileReader;
+import com.github.theFramework.managers.SoundManager;
+import com.github.theFramework.managers.TextManager;
 import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
