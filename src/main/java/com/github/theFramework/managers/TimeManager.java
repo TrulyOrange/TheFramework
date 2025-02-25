@@ -18,13 +18,13 @@ public class TimeManager {
 	 * @param timeString The time in HH:mm format.
 	 * @return The corresponding Minecraft tick value.
 	 */
-	public static int timeToTicks(String timeString) {
+	public static long timeToTicks(String timeString) {
 		try {
 			LocalTime time = LocalTime.parse(timeString, FORMATTER);
-			int hours = time.getHour();
-			int minutes = time.getMinute();
+			long hours = time.getHour();
+			long minutes = time.getMinute();
 
-			int totalMinutes = (hours * 60) + minutes;
+			long totalMinutes = (hours * 60) + minutes;
 			return ((totalMinutes * 1000) / 60 + 18000) % 24000;
 		} catch (Exception e) {
 			TextManager.console(TextManager.format("[Time Manager] Invalid time format: " + timeString));
@@ -40,10 +40,10 @@ public class TimeManager {
 	 */
 	public static String ticksToTime(int ticks) {
 		ticks = (ticks + 6000) % 24000;
-		int totalMinutes = (ticks * 60) / 1000;
+		long totalMinutes = (ticks * 60) / 1000;
 
-		int hours = totalMinutes / 60;
-		int minutes = totalMinutes % 60;
+		long hours = totalMinutes / 60;
+		long minutes = totalMinutes % 60;
 
 		return String.format("%02d:%02d", hours, minutes);
 	}
@@ -56,9 +56,9 @@ public class TimeManager {
 	 * @param endTime   The end time in HH:mm format.
 	 * @return True if the current time is within the range.
 	 */
-	public static boolean isTimeWithinRange(int worldTime, String startTime, String endTime) {
-		int startTicks = timeToTicks(startTime);
-		int endTicks = timeToTicks(endTime);
+	public static boolean isTimeWithinRange(long worldTime, String startTime, String endTime) {
+		long startTicks = timeToTicks(startTime);
+		long endTicks = timeToTicks(endTime);
 
 		if (startTicks == -1 || endTicks == -1) return false;
 
@@ -76,10 +76,10 @@ public class TimeManager {
 	 * @param time2 The second time in HH:mm format.
 	 * @return -1 if time1 is earlier, 1 if time2 is earlier, 0 if equal.
 	 */
-	public static int compareTimes(String time1, String time2) {
-		int ticks1 = timeToTicks(time1);
-		int ticks2 = timeToTicks(time2);
+	public static long compareTimes(String time1, String time2) {
+		long ticks1 = timeToTicks(time1);
+		long ticks2 = timeToTicks(time2);
 
-		return Integer.compare(ticks1, ticks2);
+		return Long.compare(ticks1, ticks2);
 	}
 }
