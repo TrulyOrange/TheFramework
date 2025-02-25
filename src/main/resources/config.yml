@@ -48,7 +48,11 @@ spawn:
 # ---------------------------------------- [[ Drops Addon ]] ----------------------------------------
 # ---------------------------------------------------------------------------------------------------
 drops:
-    display: "&7x%amount% %drop%"
+    display: "%value%%name%"
+    display-format:
+        value: "&7x&f%amount% "
+        name: "%drop%"
+
     glow: true
     auto-pickup: false
 
