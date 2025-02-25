@@ -20,8 +20,19 @@ public final class TheFramework extends JavaPlugin {
 		return getPlugin(TheFramework.class);
 	}
 
+	public static boolean isEnabled(String pluginName) {
+		return Bukkit.getPluginManager().getPlugin(pluginName) != null;
+	}
+
 	@Override
 	public void onEnable() {
+		FileReader.load();
+		Placeholders.load();
+		CommandsManager.load();
+
+		registerEvent(CommandsManager.getInstance());
+		registerEvent(new PlayerManager());
+
 		TextManager.console(TextManager.format(
 			"&b\n\n" +
 				"  &b████████&3╗&b██&3╗  &b██&3╗&b███████&3╗   &b███████&3╗&b██████&3╗  &b█████&3╗ &b███&3╗   &b███&3╗&b███████&3╗ &b██&3╗       &b██&3╗ &b█████&3╗ &b██████&3╗ &b██&3╗  &b██&3╗\n" +
@@ -31,16 +42,9 @@ public final class TheFramework extends JavaPlugin {
 				"     &b██&3║   &b██&3║  &b██&3║&b███████&3╗   &b██&3║     &b██&3║  &b██&3║&b██&3║  &b██&3║&b██&3║ ╚═╝ &b██&3║&b███████&3╗  &3╚&b██&3╔╝ ╚&b██&3╔╝ ╚&b█████&3╔╝&b██&3║  &b██&3║&b██&3║ ╚&b██&3╗\n" +
 				"     &3╚═╝   ╚═╝  ╚═╝╚══════╝   ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝   ╚═╝   ╚═╝   ╚════╝ ╚═╝  ╚═╝╚═╝  ╚═╝\n" +
 				"  &f&m                                                                                                             &r\n" +
-				"  &3Developed by &fOrange                                &3v&f1.0.1                                    &3Running on &fPaper" +
+				"  &3Developed by &fOrange                                &3v&f1.0.6                                    &3Running on &fPaper" +
 				"\n"
 		));
-
-		FileReader.load();
-		Placeholders.load();
-		CommandsManager.load();
-
-		registerEvent(CommandsManager.getInstance());
-		registerEvent(new PlayerManager());
 	}
 
 	@Override
