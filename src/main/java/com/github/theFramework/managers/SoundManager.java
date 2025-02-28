@@ -12,14 +12,19 @@ public class SoundManager {
 		play(player, soundName, 1, 1);
 	}
 	public static void play(Player player, String soundName, int volume, int pitch) {
+		Sound sound = get(soundName);
+		play(player, sound, volume, pitch);
+	}
+	public static void play(Player player, Sound sound) {
+		play(player, sound, 1, 1);
+	}
+	public static void play(Player player, Sound sound, int volume, int pitch) {
+		if (sound != null)
+			player.playSound(player.getLocation(), sound, volume, pitch);
+	}
+
+	public static Sound get(String soundName) {
 		NamespacedKey key = TheFramework.getNamespacedKey(soundName);
-		Sound sound = (key != null) ? Registry.SOUNDS.get(key) : null;
-
-		if (sound == null) {
-			TextManager.console(TextManager.format("&6[Sound Manager] Invalid sound: " + soundName));
-			return;
-		}
-
-		player.playSound(player.getLocation(), sound, volume, pitch);
+		return (key != null) ? Registry.SOUNDS.get(key) : null;
 	}
 }

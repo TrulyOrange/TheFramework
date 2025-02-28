@@ -30,7 +30,7 @@ public final class TheFramework extends JavaPlugin {
 		Placeholders.load();
 		CommandsManager.load();
 
-		registerEvent(CommandsManager.getInstance());
+		registerEvent(CommandsManager.self());
 		registerEvent(new PlayerManager());
 
 		TextManager.console(TextManager.format(
@@ -42,7 +42,7 @@ public final class TheFramework extends JavaPlugin {
 				"     &b██&3║   &b██&3║  &b██&3║&b███████&3╗   &b██&3║     &b██&3║  &b██&3║&b██&3║  &b██&3║&b██&3║ ╚═╝ &b██&3║&b███████&3╗  &3╚&b██&3╔╝ ╚&b██&3╔╝ ╚&b█████&3╔╝&b██&3║  &b██&3║&b██&3║ ╚&b██&3╗\n" +
 				"     &3╚═╝   ╚═╝  ╚═╝╚══════╝   ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝   ╚═╝   ╚═╝   ╚════╝ ╚═╝  ╚═╝╚═╝  ╚═╝\n" +
 				"  &f&m                                                                                                             &r\n" +
-				"  &3Developed by &fOrange                                &3v&f1.0.9                                    &3Running on &fPaper" +
+				"  &3Developed by &fOrange                                &3v&f1.0.10                                   &3Running on &fPaper" +
 				"\n"
 		));
 	}

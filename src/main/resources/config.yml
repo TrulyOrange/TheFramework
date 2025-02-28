@@ -4,7 +4,7 @@ player-messages:
     welcome: "&a+ &f%player% &bhas joined for the first time!"
 
 command-messages:
-    unknown: "&cUnknown command: &o/%input%"
+    unknown: "&cUnknown command: &o/%command%"
     denied: "&cUnknown command: &o/%command%"
     usage: "&fUsage: %usage%"
 
@@ -37,7 +37,6 @@ spawn:
     moved-message: "&cTeleportation cancelled due to movement!"
     cooldown-message: "&cYou need to wait %cooldown% more seconds!"
     deny-message: "&cYou can't teleport right now!"
-
     cancel-sound: BLOCK.NOTE_BLOCK.BASS
 
     locations:
@@ -86,7 +85,7 @@ drops:
 items:
     types:
         - WEAPON,
-        - Armor,
+        - ARMOR,
         - TOOL,
         - FOOD,
         - FUEL,
