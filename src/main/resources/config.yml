@@ -105,13 +105,15 @@ items:
             - "%rarity% %luck%"
             - "%dupe_level% %dupe_chance%"
             - " "
+            - "%enchantments%"
+            - " "
             - "%attributes%"
             - " "
             - "%unbreakable%"
-            - "%type%"
+            - "%type_format%"
 
-        unbreakable: "&3Unbreakable"
         type: "&8&o%type%"
+        unbreakable: "&3Unbreakable"
 
         luck-default: "&c⭐ &f%luck%"
         luck:
@@ -122,10 +124,6 @@ items:
             1000: "&e⭐⭐⭐⭐⭐ &f%luck%"
 
         dupe:
-            chance-default: "&f%chance%"
-            chance:
-                10: "&b%chance%"
-
             level-default: "&c🌟 &f%level%"
             level:
                 1: "&f🌟 &f%level%"
@@ -133,6 +131,11 @@ items:
                 3: "&b🌟🌟🌟 &f%level%"
                 4: "&5🌟🌟🌟🌟 &f%level%"
                 5: "&e🌟🌟🌟🌟🌟 &f%level%"
+
+            chance-default: "&f%chance%"
+            chance:
+                10: "&b%chance%"
+                30: "&e%chance%"
 
         enchants-default: "&9💠 &f%level%"
         enchants:
@@ -142,27 +145,27 @@ items:
             EFFICIENCY: "&b⛏ &f%level%"
             FORTUNE: "&b🍀 &f%level%"
 
-        attributes-default: "&9💠  &f%level%"
+        attributes-default: "&9💠  &f%amount%"
         attributes:
-            ARMOR: "&9🛡️  &f%level%"
-            MAX_HEALTH: "&9❤  &f%level%"
-            MOVEMENT_SPEED: "&9🎿  &f%level%"
+            ARMOR: "&9🛡️  &f%amount%"
+            MAX_HEALTH: "&9❤  &f%amount%"
+            MOVEMENT_SPEED: "&9🎿  &f%amount%"
 
-            ATTACK_DAMAGE: "&9🗡  &f%level%"
-            ATTACK_SPEED: "&9🗡⌛ &f%level%"
-            ARMOR_TOUGHNESS: "&9🛡️  &f%level%"
+            ATTACK_DAMAGE: "&9🗡  &f%amount%"
+            ATTACK_SPEED: "&9🗡⌛ &f%amount%"
+            ARMOR_TOUGHNESS: "&9🛡️  &f%amount%"
 
-            BLOCK_INTERACTION_RANGE: "&9⛏🛜  &f%level%"
-            ENTITY_INTERACTION_RANGE: "&9🗡🛜  &f%level%"
-            BLOCK_BREAK_SPEED: "&9⛏  &f%level%"
-            MINING_EFFICIENCY: "&9⛏  &f%level%"
-            SUBMERGED_MINING_SPEED: "&9⛏🌊  &f%level%"
+            BLOCK_INTERACTION_RANGE: "&9⛏🛜  &f%amount%"
+            ENTITY_INTERACTION_RANGE: "&9🗡🛜  &f%amount%"
+            BLOCK_BREAK_SPEED: "&9⛏  &f%amount%"
+            MINING_EFFICIENCY: "&9⛏  &f%amount%"
+            SUBMERGED_MINING_SPEED: "&9⛏🌊  &f%amount%"
 
-            SCALE: "&9📐  &f%level%"
-            STEP_HEIGHT: "&9📐  &f%level%"
-            GRAVITY: "&9🌍  &f%level%"
-            JUMP_STRENGTH: "&9🌍  &f%level%"
+            SCALE: "&9📐  &f%amount%"
+            STEP_HEIGHT: "&9📐  &f%amount%"
+            GRAVITY: "&9🌍  &f%amount%"
+            JUMP_STRENGTH: "&9🌍  &f%amount%"
 
-            OXYGEN_BONUS: "&9🫧  &f%level%"
-            WATER_MOVEMENT_EFFICIENCY: "&9🎿🌊 &f%level%"
-            SPAWN_REINFORCEMENTS: "&9🐕  &f%level%"
+            OXYGEN_BONUS: "&9🫧  &f%amount%"
+            WATER_MOVEMENT_EFFICIENCY: "&9🎿🌊 &f%amount%"
+            SPAWN_REINFORCEMENTS: "&9🐕  &f%amount%"
