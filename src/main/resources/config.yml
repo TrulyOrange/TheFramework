@@ -104,13 +104,10 @@ items:
         lore:
             - "%rarity% %luck%"
             - "%dupe_level% %dupe_chance%"
-            - " "
             - "%enchantments%"
-            - " "
             - "%attributes%"
-            - " "
             - "%unbreakable%"
-            - "%type_format%"
+            - "%type%"
 
         type: "&8&o%type%"
         unbreakable: "&3Unbreakable"
@@ -132,12 +129,13 @@ items:
                 4: "&5🌟🌟🌟🌟 &f%level%"
                 5: "&e🌟🌟🌟🌟🌟 &f%level%"
 
-            chance-default: "&f%chance%"
+            chance-default: "&f%chance%\n"
             chance:
                 10: "&b%chance%"
                 30: "&e%chance%"
 
         enchants-default: "&9💠 &f%level%"
+        enchants-space: true
         enchants:
             SHARPNESS: "&b🗡 &f%level%"
             PROTECTION: "&b🛡️ &f%level%"
@@ -146,6 +144,7 @@ items:
             FORTUNE: "&b🍀 &f%level%"
 
         attributes-default: "&9💠  &f%amount%"
+        attributes-space: true
         attributes:
             ARMOR: "&9🛡️  &f%amount%"
             MAX_HEALTH: "&9❤  &f%amount%"
