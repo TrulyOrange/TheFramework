@@ -1,5 +1,5 @@
 name: TheFramework
-version: '1.0.1'
+version: '1.0.11'
 main: com.github.theFramework.TheFramework
 load: STARTUP
 api-version: '1.21'

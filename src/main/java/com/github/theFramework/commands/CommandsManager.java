@@ -1,17 +1,15 @@
 package com.github.theFramework.commands;
 
+import com.github.theFramework.Config;
 import com.github.theFramework.TheFramework;
-import com.github.theFramework.managers.FileReader;
 import com.github.theFramework.managers.SoundManager;
 import com.github.theFramework.managers.TextManager;
 import lombok.Getter;
 import org.bukkit.Bukkit;
-import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
-import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -83,16 +81,16 @@ public class CommandsManager implements CommandExecutor, TabCompleter, Listener 
 
 		if (command == null) {
 			event.setCancelled(true);
-			TextManager.sendActionBar(player, TextManager.format(Config.Messages.UNKNOWN, inputCommand));
-			SoundManager.play(player, Config.Sounds.UNKNOWN);
+			TextManager.sendActionBar(player, TextManager.format(Config.Commands.Messages.UNKNOWN, inputCommand));
+			SoundManager.play(player, Config.Commands.Sounds.UNKNOWN);
 			return;
 		}
 
 		String permission = command.getPermission();
 		if (permission != null && !player.hasPermission(permission)) {
 			event.setCancelled(true);
-			TextManager.sendActionBar(player, TextManager.format(Config.Messages.DENIED, command));
-			SoundManager.play(player, Config.Sounds.DENIED);
+			TextManager.sendActionBar(player, TextManager.format(Config.Commands.Messages.DENIED, command));
+			SoundManager.play(player, Config.Commands.Sounds.DENIED);
 			return;
 		}
 
@@ -100,24 +98,8 @@ public class CommandsManager implements CommandExecutor, TabCompleter, Listener 
 
 		if (args.length < getRequiredArgs(command.getUsage())) {
 			event.setCancelled(true);
-			TextManager.sendActionBar(player, TextManager.format(Config.Messages.USAGE, command));
-			SoundManager.play(player, Config.Sounds.USAGE);
-		}
-	}
-
-	private static class Config {
-		static final YamlConfiguration CONFIG = FileReader.getFile("config");
-
-		static class Messages {
-			static final String UNKNOWN = CONFIG.getString("command-messages.unknown");
-			static final String DENIED = CONFIG.getString("command-messages.denied");
-			static final String USAGE = CONFIG.getString("command-messages.usage");
-		}
-
-		static class Sounds {
-			static final Sound UNKNOWN = SoundManager.get(CONFIG.getString("command-sounds.unknown"));
-			static final Sound DENIED = SoundManager.get(CONFIG.getString("command-sounds.denied"));
-			static final Sound USAGE = SoundManager.get(CONFIG.getString("command-sounds.usage"));
+			TextManager.sendActionBar(player, TextManager.format(Config.Commands.Messages.USAGE, command));
+			SoundManager.play(player, Config.Commands.Sounds.USAGE);
 		}
 	}
 }
