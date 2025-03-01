@@ -103,7 +103,7 @@ items:
         name: "%name%"
         lore:
             - "%rarity% %luck%"
-            - "%dupe%"
+            - "%dupe_level% %dupe_chance%"
             - " "
             - "%attributes%"
             - " "
@@ -111,57 +111,58 @@ items:
             - "%type%"
 
         unbreakable: "&3Unbreakable"
-        type: "&8&o%value%"
+        type: "&8&o%type%"
 
-        luck-default: "&c⭐ &f%value%"
+        luck-default: "&c⭐ &f%luck%"
         luck:
-            1: "&f⭐ &f%value%"
-            30: "&a⭐⭐ &f%value%"
-            50: "&b⭐⭐⭐ &f%value%"
-            100: "&d⭐⭐⭐⭐ &f%value%"
-            1000: "&e⭐⭐⭐⭐⭐ &f%value%"
+            1: "&f⭐ &f%luck%"
+            30: "&a⭐⭐ &f%luck%"
+            50: "&b⭐⭐⭐ &f%luck%"
+            100: "&d⭐⭐⭐⭐ &f%luck%"
+            1000: "&e⭐⭐⭐⭐⭐ &f%luck%"
 
         dupe:
-            text: "%level% %chance%"
-
-            chance-default: "&f%value%"
+            chance-default: "&f%chance%"
             chance:
-                10: "&b%value%"
+                10: "&b%chance%"
 
-            level-default: "&c🌟 &f%value%"
+            level-default: "&c🌟 &f%level%"
             level:
-                1: "&f🌟 &f%value%"
-                2: "&a🌟🌟 &f%value%"
-                3: "&b🌟🌟🌟 &f%value%"
-                4: "&5🌟🌟🌟🌟 &f%value%"
-                5: "&e🌟🌟🌟🌟🌟 &f%value%"
+                1: "&f🌟 &f%level%"
+                2: "&a🌟🌟 &f%level%"
+                3: "&b🌟🌟🌟 &f%level%"
+                4: "&5🌟🌟🌟🌟 &f%level%"
+                5: "&e🌟🌟🌟🌟🌟 &f%level%"
 
-        attributes-default: "&b💠 &f%value%"
+        enchants-default: "&9💠 &f%level%"
+        enchants:
+            SHARPNESS: "&b🗡 &f%level%"
+            PROTECTION: "&b🛡️ &f%level%"
+
+            EFFICIENCY: "&b⛏ &f%level%"
+            FORTUNE: "&b🍀 &f%level%"
+
+        attributes-default: "&9💠  &f%level%"
         attributes:
-            MAX_HEALTH: "&c❤ &f%value%"
-            MOVEMENT_SPEED: "&b🎿 &f%value%"
-            SNEAKING_SPEED: "&b🎿 &f%value%"
+            ARMOR: "&9🛡️  &f%level%"
+            MAX_HEALTH: "&9❤  &f%level%"
+            MOVEMENT_SPEED: "&9🎿  &f%level%"
 
-            ATTACK_DAMAGE: "&c🗡 &f%value%"
-            ATTACK_SPEED: "&c⌛ &f%value%"
-            ATTACK_KNOCKBACK: "&c🗡 &f%value%"
-            KNOCKBACK_RESISTANCE: "&c🛡️ &f%value%"
+            ATTACK_DAMAGE: "&9🗡  &f%level%"
+            ATTACK_SPEED: "&9🗡⌛ &f%level%"
+            ARMOR_TOUGHNESS: "&9🛡️  &f%level%"
 
-            ARMOR: "&b🛡️ &f%value%"
-            ARMOR_TOUGHNESS: "&b🛡️ &f%value%"
+            BLOCK_INTERACTION_RANGE: "&9⛏🛜  &f%level%"
+            ENTITY_INTERACTION_RANGE: "&9🗡🛜  &f%level%"
+            BLOCK_BREAK_SPEED: "&9⛏  &f%level%"
+            MINING_EFFICIENCY: "&9⛏  &f%level%"
+            SUBMERGED_MINING_SPEED: "&9⛏🌊  &f%level%"
 
-            LUCK: "&a🍀 &f%value%"
-            BLOCK_INTERACTION_RANGE: "&b🛜 &f%value%"
-            ENTITY_INTERACTION_RANGE: "&b🛜 &f%value%"
-            BLOCK_BREAK_SPEED: "&6⛏ &f%value%"
-            MINING_EFFICIENCY: "&6⛏ &f%value%"
-            SUBMERGED_MINING_SPEED: "&b🌊 &f%value%"
+            SCALE: "&9📐  &f%level%"
+            STEP_HEIGHT: "&9📐  &f%level%"
+            GRAVITY: "&9🌍  &f%level%"
+            JUMP_STRENGTH: "&9🌍  &f%level%"
 
-            SCALE: "&6📐 &f%value%"
-            STEP_HEIGHT: "&6📐 &f%value%"
-            GRAVITY: "&a🌍 &f%value%"
-            JUMP_STRENGTH: "&a🌍 &f%value%"
-
-            OXYGEN_BONUS: "&b🫧 &f%value%"
-            WATER_MOVEMENT_EFFICIENCY: "&b🌊 &f%value%"
-            SPAWN_REINFORCEMENTS: "&2🐕 &f%value%"
+            OXYGEN_BONUS: "&9🫧  &f%level%"
+            WATER_MOVEMENT_EFFICIENCY: "&9🎿🌊 &f%level%"
+            SPAWN_REINFORCEMENTS: "&9🐕  &f%level%"
